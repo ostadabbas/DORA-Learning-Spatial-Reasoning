@@ -12,11 +12,11 @@ from google import genai  # NEW import
 import re
 import time
 from google.genai import types
-import argparse  # Add this
-
+import argparse
+import os
 
 # Configure Gemini API with NEW package
-client = genai.Client(api_key="XXXX-8-XXXX-10-XXXX-11")
+client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 dataset_path = "/scratch/XXXX-6.XXXX-7/grpo_dataset_updatedv2"
 max_new_tokens = 256

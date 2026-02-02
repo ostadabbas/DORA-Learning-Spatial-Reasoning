@@ -10,8 +10,10 @@ import random
 import google.generativeai as genai
 import re
 import time
+import os
+
 # Configure Gemini API
-genai.configure(api_key="AIzaSyD2ygsnVDB_8_JibIJlHPu6F9IsNPsnang")
+genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
 
 dataset_path = "/scratch/XXXX-6.XXXX-7/grpo_dataset_updatedv2"
 max_examples = 534

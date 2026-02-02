@@ -14,9 +14,10 @@ import time
 import base64
 import io
 import argparse
+import os
 
 # Configure OpenAI API
-client = OpenAI(api_key="XXXX-13-proj-s")
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 dataset_path = "/scratch/XXXX-6.XXXX-7/grpo_dataset_updatedv2"
 max_new_tokens = 256
